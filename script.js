@@ -82,3 +82,29 @@ function fixedNav() {
   }
 }
 window.addEventListener("scroll", fixedNav);
+
+// // Ініціалізуємо ScrollReveal
+ScrollReveal().reveal(".body-part-1", {
+  delay: 400,
+  distance: "50px",
+  origin: "left",
+  duration: 1000,
+});
+ScrollReveal().reveal(".body-part-2", {
+  delay: 400,
+  distance: "50px",
+  origin: "right",
+  duration: 1000,
+});
+ScrollReveal().reveal(".hoodie-guy", {
+  delay: 800,
+  distance: "150px",
+  origin: "top",
+  duration: 1000,
+});
+ScrollReveal().reveal(".cards", {
+  delay: 800,
+  distance: "350px",
+  origin: "left",
+  duration: 1000,
+});
