@@ -108,3 +108,24 @@ ScrollReveal().reveal(".cards", {
   origin: "left",
   duration: 1000,
 });
+// swiper start
+// Initialize Swiper
+var swiper = new Swiper(".swiper-container", {
+  // Optional parameters
+  loop: true,
+  autoplay: {
+    delay: 3000, // Інтервал часу (у мілісекундах) між слайдами
+    disableOnInteraction: false, // Автопрогравання не зупиняється при взаємодії користувача
+  },
+  slidesPerView: 1,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+// swiper end

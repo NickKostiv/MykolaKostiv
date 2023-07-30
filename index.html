@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <title>Mykola Kostiv</title>
     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -51,7 +52,10 @@
             <div class="body-title">
                 <h1>Front-end Developer: <br> Coding Magic</h1>
                 <p>I code beautifully simple things,<br>and I love what I do.</p>
-                <a href="https://t.me/fucksleeeeeeeep" target="_blank">LET'S CHAT IN TELEGRAM!</a>
+                <div class="telegram__links">
+                    <a href="https://t.me/fucksleeeeeeeep" target="_blank">LET'S CHAT IN TELEGRAM!</a>
+                    <a href="https://t.me/kostivFrontEnd" target="_blank">Click to view all my works</a>
+                </div>
             </div>
             <div class="body-tail">
                 <h1>2</h1>
@@ -93,7 +97,7 @@
                     <i class="fa-solid fa-wand-magic-sparkles"></i>
                 </div>
                 <p>Create design products with unique ideas that matters</p>
-                <a href="">10 PROJECTS</a>
+                <a href="https://t.me/kostivFrontEnd">10 PROJECTS</a>
             </div>
             <div class="design-card">
                 <div>
@@ -101,7 +105,7 @@
                     <i class="fa-solid fa-code"></i>
                 </div>
                 <p>Making the Web Look Good</p>
-                <a href="">10 PROJECTS</a>
+                <a href="https://t.me/kostivFrontEnd">10 PROJECTS</a>
             </div>
         </div>
         <div class="introduction-text">
@@ -124,30 +128,52 @@
     </section> 
 
 <!-- Latest works -->
-    <section id="latest-works">
-        <div class="latest-work-title">
-            <h3>Latest Works</h3>
-            <p>Perfect solutions for digital experience</p>
-        </div>
-        
-        <div class="project-card">
-            <div class="title">
-                <h3>Desire Trip</h3>
-                <div class="tech-stack">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>JS</p>
-                    <p>JQuery</p>
-                    <p>Swiper</p>
-                    <p>Tailwind</p>
+<section id="latest-works">
+    <div class="latest-work-title">
+        <h3>Latest Works</h3>
+        <p>Perfect solutions for digital experience</p>
+    </div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide project-card">
+                <div class="title">
+                    <h3>Desire Trip</h3>
+                    <div class="tech-stack">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JS</p>
+                        <p>JQuery</p>
+                        <p>Swiper</p>
+                        <p>Tailwind</p>
+                    </div>
+                    <a href="https://nickkostiv.github.io/Travel/index.html" class="project__link developer-intro" target="_blank">
+                        <p>View website</p>
+                    </a>
                 </div>
-                <a href="https://nickkostiv.github.io/Travel/index.html" class="project__link developer-intro" target="_blank">
-                    <p>View website</p>
-                </a>
-                </div>
-                <img src="assets/Projects/222.png" alt="" class="project-img">
+                <img src="assets/Projects/travel3.png" alt="" class="project-img">
             </div>
-            <div class="project-card">
+
+            <div class="swiper-slide project-card">
+                <div class="title">
+                    <h3>Desire Trip</h3>
+                    <div class="tech-stack">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JS</p>
+                        <p>JQuery</p>
+                        <p>Swiper</p>
+                        <p>Tailwind</p>
+                    </div>
+                    <a href="https://nickkostiv.github.io/Travel/index.html" class="project__link developer-intro" target="_blank">
+                        <p>View website</p>
+                    </a>
+                </div>
+                <img src="assets/Projects/travel2.png" alt="" class="project-img">
+            </div>
+
+            <div class="swiper-slide project-card">
                 <div class="title">
                     <h3>Furniture</h3>
                     <div class="tech-stack">
@@ -157,29 +183,105 @@
                     </div>
                     <a href="https://nickkostiv.github.io/furni/build/" class="project__link developer-intro" target="_blank">
                         <p>View website</p>
-                </a>
+                    </a>
                 </div>
-                <img src="assets/Projects/project-1.jpeg" alt="" class="project-img">
+                <img src="assets/Projects/furni1.png" alt="" class="project-img">
             </div>
-    
-        <div class="project-card">
-            <div class="title">
-                <h3>LossWeight</h3>
-                <div class="tech-stack">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>JS</p>
-                    <p>Bootstrap</p>
-                    <p>ScrollReveal</p>
-                    <p>JQuery</p>
+
+            <div class="swiper-slide project-card">
+                <div class="title">
+                    <h3>Furniture</h3>
+                    <div class="tech-stack">
+                        <p>Gulp.js</p>
+                        <p>SCSS</p>
+                        <p>HTML</p>
+                    </div>
+                    <a href="https://nickkostiv.github.io/furni/build/" class="project__link developer-intro" target="_blank">
+                        <p>View website</p>
+                    </a>
                 </div>
-                <a href="https://nickkostiv.github.io/Myweight/" class="project__link developer-intro" target="_blank">
-                    <p>View website</p>
-                </a>
+                <img src="assets/Projects/furni2.png" alt="" class="project-img">
             </div>
-            <img src="assets/Projects/333.png" alt="" class="project-img">
+
+            <div class="swiper-slide project-card">
+                <div class="title">
+                    <h3>Furniture</h3>
+                    <div class="tech-stack">
+                        <p>Gulp.js</p>
+                        <p>SCSS</p>
+                        <p>HTML</p>
+                    </div>
+                    <a href="https://nickkostiv.github.io/furni/build/" class="project__link developer-intro" target="_blank">
+                        <p>View website</p>
+                    </a>
+                </div>
+                <img src="assets/Projects/furni3.png" alt="" class="project-img">
+            </div>
+
+            <div class="swiper-slide project-card">
+                <div class="title">
+                    <h3>LossWeight</h3>
+                    <div class="tech-stack">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JS</p>
+                        <p>Bootstrap</p>
+                        <p>ScrollReveal</p>
+                        <p>JQuery</p>
+                    </div>
+                    <a href="https://nickkostiv.github.io/Myweight/" class="project__link developer-intro" target="_blank">
+                        <p>View website</p>
+                    </a>
+                </div>
+                <img src="assets/Projects/loss1.png" alt="" class="project-img">
+            </div>
+
+            <div class="swiper-slide project-card">
+                <div class="title">
+                    <h3>LossWeight</h3>
+                    <div class="tech-stack">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JS</p>
+                        <p>Bootstrap</p>
+                        <p>ScrollReveal</p>
+                        <p>JQuery</p>
+                    </div>
+                    <a href="https://nickkostiv.github.io/Myweight/" class="project__link developer-intro" target="_blank">
+                        <p>View website</p>
+                    </a>
+                </div>
+                <img src="assets/Projects/loss2.png" alt="" class="project-img">
+            </div>
+
+            <div class="swiper-slide project-card">
+                <div class="title">
+                    <h3>LossWeight</h3>
+                    <div class="tech-stack">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JS</p>
+                        <p>Bootstrap</p>
+                        <p>ScrollReveal</p>
+                        <p>JQuery</p>
+                    </div>
+                    <a href="https://nickkostiv.github.io/Myweight/" class="project__link developer-intro" target="_blank">
+                        <p>View website</p>
+                    </a>
+                </div>
+                <img src="assets/Projects/loss3.png" alt="" class="project-img">
+            </div>
         </div>
-    </section>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Add Navigation Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
 
 <!-- Section testimonials  -->
     <section id="testimonial">
@@ -259,11 +361,7 @@
         <section id="footer">
             <div class="footer-content">
                 <div class="footer-nav-menu">
-                    <ul class="footer-menu">
-                        <li><a class="" href="#">Works</a></li>
-                        <li><a class="" href="#">Notes</a></li>
-                        <li><a class="" href="#">Contacts</a></li>
-                    </ul>
+                    <p class="footer-menu">Contact me using the links below</p>
                 </div>
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/mykola-kostiv-7566b3283/" target="_blank">
@@ -286,6 +384,7 @@
         </section>
     </div>
     <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
