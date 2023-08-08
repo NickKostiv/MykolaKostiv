@@ -131,7 +131,6 @@ if (window.innerWidth >= 992) {
       pin: true,
       scrub: 1,
       end: "+=3000",
-      markers: true,
     },
   });
 
@@ -143,7 +142,7 @@ if (window.innerWidth >= 992) {
       trigger: ".swiper-container-top",
       start: "bottom right",
       scrub: true,
-      markers: true,
+
       pin: true,
       onEnter: () => scrollTween.kill(),
       onLeaveBack: () => {
