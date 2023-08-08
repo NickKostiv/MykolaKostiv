@@ -103,7 +103,264 @@ body::selection {
   background: #FEFEFE;
 }
 
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
 
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.section__preloader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  /* Замініть на ваш фоновий колір */
+}
+
+.section__preloader .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section__preloader .preloader__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section__preloader .item__top,
+.section__preloader .item__center,
+.section__preloader .item__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section__preloader .item__bottom {
+  margin-top: 50px;
+}
+
+.section__preloader .item__center-title {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 196px;
+  font-weight: bold;
+  line-height: 1.3;
+  letter-spacing: 10px;
+}
+
+.section__preloader .circle__animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 40px;
+}
+
+.section__preloader .circle__animation .down-arrow-container .down-arrow,
+.section__preloader .circle__animation .down-arrow-container .down-arrow-white {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  /* Відстань між стрілкою і текстом SNUUG */
+}
+
+.section__preloader .circle__animation .down-arrow-container .down-arrow img,
+.section__preloader .circle__animation .down-arrow-container .down-arrow-white img {
+  fill: white;
+}
+
+.section__preloader .circle__animation .circle__animation-item {
+  opacity: 0.3;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.section__preloader .circle__animation .circle__animation-item-left {
+  position: absolute;
+  left: -40px;
+  /* Відстань від стрілки до лівої букви s */
+  top: 10px;
+}
+
+.section__preloader .circle__animation .circle__animation-item-top {
+  position: absolute;
+  top: -40px;
+  /* Відстань від стрілки до верхньої букви o */
+  left: 40px;
+}
+
+.section__preloader .circle__animation .circle__animation-item-right {
+  position: absolute;
+  right: -30px;
+  /* Відстань від стрілки до правої букви o */
+  top: 10px;
+}
+
+.section__preloader .circle__animation .circle__animation-item-bottom {
+  position: absolute;
+  bottom: -20px;
+  /* Відстань від стрілки до нижньої букви n */
+  left: 43px;
+}
+
+@media (max-width: 1449.98px) {
+  .container {
+    max-width: 1449px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 740px;
+  }
+
+  .section__preloader .item__center-title {
+    font-size: 100px;
+  }
+
+  .section__preloader .circle__animation .down-arrow-container .down-arrow,
+  .section__preloader .circle__animation .down-arrow-container .down-arrow-white {
+    width: 60px;
+    height: 60px;
+  }
+
+  .section__preloader .circle__animation .circle__animation-item-left {
+    left: -20px;
+    /* Відстань від стрілки до лівої букви s */
+    top: 0px;
+  }
+
+  .section__preloader .circle__animation .circle__animation-item-top {
+    top: -20px;
+    /* Відстань від стрілки до верхньої букви o */
+    left: 23px;
+  }
+
+  .section__preloader .circle__animation .circle__animation-item-right {
+    right: -13px;
+    top: 2px;
+  }
+
+  .section__preloader .circle__animation .circle__animation-item-bottom {
+    bottom: -10px;
+    /* Відстань від стрілки до нижньої букви n */
+    left: 23px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .container {
+    max-width: none;
+  }
+}
+
+@media (max-width: 380.98px) {
+  .section__preloader .item__center-title {
+    font-size: 48px;
+  }
+
+  .section__preloader .circle__animation .down-arrow-container .down-arrow,
+  .section__preloader .circle__animation .down-arrow-container .down-arrow-white {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .section__preloader .circle__animation .circle__animation-item {
+    font-size: 22px;
+  }
+
+  .section__preloader .circle__animation .circle__animation-item-left {
+    left: -15px;
+    /* Відстань від стрілки до лівої букви s */
+    top: 0px;
+  }
+
+  .section__preloader .circle__animation .circle__animation-item-top {
+    top: -20px;
+    /* Відстань від стрілки до верхньої букви o */
+    left: 15px;
+  }
+
+  .section__preloader .circle__animation .circle__animation-item-right {
+    right: -10px;
+    /* Відстань від стрілки до лівої букви s */
+    top: 0px;
+  }
+
+  .section__preloader .circle__animation .circle__animation-item-bottom {
+    top: 28px;
+    /* Відстань від стрілки до верхньої букви o */
+    left: 14px;
+  }
+}
 
 /* ---------- SECTION HEADER ---------- */
 #header {
@@ -375,7 +632,7 @@ nav {
 #content-body {
   padding: 30px 50px 50px 50px;
   display: flex;
-  background-color: #2d2e32;
+  background-color: #513f9a;;
   align-content: center;
   align-items: center;
   justify-content: space-between;
@@ -618,7 +875,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 100px;
-  background-color: #25262a;
+  background-color: #513f9a;
   gap: 100px;
   /* min-height: 95vh; */
   align-items: center;
@@ -722,6 +979,10 @@ nav {
   text-decoration: underline;
   text-underline-offset: 5px;
 }
+.wrapper{
+  overflow-x: hidden;
+  position: relative;
+}
 
 .introduction-text {
   display: block;
@@ -749,16 +1010,40 @@ nav {
 }
 
 #latest-works {
-  /* min-height: 150vh; */
-  background-color: #25262a;
-  padding: 150px;
+  background-color: #513f9a;
   display: flex;
+  padding-bottom: 100px;
   flex-direction: column; /* Changed to column */
   justify-content: space-between;
   gap: 80px;
 }
 .latest-work-title{
   margin: 0 auto;
+  padding-bottom: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+/* Додано стилі для білих крапок пагінації */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  opacity: 0.5;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+/* Медіазапит для показу пагінації на екранах менше 992 пікселів */
+@media (max-width: 992px) {
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 35px; /* Відступ від нижньої межі слайдера */
+  }
 }
 .latest-work-title h3 {
   font-size: 40px;
@@ -786,18 +1071,24 @@ nav {
 .left-project {
   /* No need for these styles */
 }
+.swiper-wrapper{
+  display: flex;
+  gap: 50px;
+}
 
 .project-card {
   width: 100%;
-  min-height: 60vh;
-  background-color: #2d3037;
-  padding: 20px;
+  max-width: 350px;
+  height: auto;
+  display: flex;
+  background-color: #5d1ae2;
+  flex-direction: column;
+  /* padding: 20px; */
   border-radius: 15px;
-  margin: 20px 0;
-  overflow: hidden;
-  display: flex; /* Added to create a column layout */
-  flex-direction: column; /* Added to create a column layout */
-  align-items: center; /* Added to center the content horizontally */
+  /* margin-right: 60px; */
+  /* padding: 20px 20px 60px 20px; */
+  padding-bottom: 60px;
+  margin: 0 auto;
 }
 
 .project-card .title {
@@ -835,13 +1126,15 @@ nav {
 
 .project-card img {
   width: 100%; /* Added to make images responsive */
-  /* max-height: 50vh; Added to limit the image height */
+  max-height: 30vh;
   object-fit: cover; /* Added to maintain aspect ratio */
   border-radius: 10px; /* Moved from .project-img-2 and .project-img-3 */
   box-shadow: -5px -5px 10px #00000040; /* Moved from .project-img-3 */
   transition: 0.5s ease;
   height: 100%;
   /* min-height: 500px; */
+  justify-content: flex-end;
+  display: flex;
 }
 
 .project-card:hover img {
@@ -876,6 +1169,8 @@ nav {
   min-height: 100vh;
   width: 100%;
   padding: 100px 150px;
+  background-color: #513f9a;
+  
 }
 @media (max-width: 992px) {
   #testimonial{
@@ -1152,6 +1447,8 @@ nav {
   height: 100%;
 }
 
+
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -1159,25 +1456,33 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .swiper-button-next, .swiper-button-prev {
-  position: absolute;
-  top: 70%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: rgb(228, 177, 11);
-  border-radius: 100%; /* Робимо стрілки круглими */
-  color: rgb(207, 35, 35);
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  display: none;
+
+}
+@media (max-width: 992px) {
+  .swiper-button-next, .swiper-button-prev {
+    display: block;
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgb(228, 177, 11);
+    border-radius: 100%; /* Робимо стрілки круглими */
+    color: rgb(207, 35, 35);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
 }
 .swiper-button-prev {
-  left: 0px;
+  left: 45%;
 }
 @media (max-width: 768px) {
   .swiper-button-next, .swiper-button-prev {
@@ -1187,9 +1492,7 @@ nav {
 
 /* Position the next button */
 .swiper-button-next {
-  right: 0px;
+  left: 50%;
 }
 
 /* Swiper slider end */
-
-

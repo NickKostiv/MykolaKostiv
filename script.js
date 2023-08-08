@@ -1,6 +1,5 @@
 const design_card_butttons = document.querySelectorAll(".design-card");
 const introduction_text = document.querySelectorAll(".introduction-text");
-
 const single_profile_card = document.querySelectorAll(".single-profile-card");
 const testimonial_card = document.querySelectorAll(".testimonial-card");
 
@@ -42,7 +41,6 @@ single_profile_card.forEach((btn, index) => {
   });
 });
 
-// Мобильное меню бургер
 function burgerMenu() {
   const burger = document.querySelector(".burger");
   const menu = document.querySelector(".menu");
@@ -58,7 +56,7 @@ function burgerMenu() {
       body.classList.remove("locked");
     }
   });
-  // Вот тут мы ставим брейкпоинт навбара
+
   window.addEventListener("resize", () => {
     if (window.innerWidth > 991.98) {
       menu.classList.remove("active");
@@ -69,63 +67,134 @@ function burgerMenu() {
 }
 burgerMenu();
 
-// Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
-function fixedNav() {
-  const nav = document.querySelector("nav");
+// Показати контент зі затримкою та анімацією
+gsap.to(".content-body", { opacity: 1, duration: 1 });
 
-  // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
-  const breakpoint = 1;
-  if (window.scrollY >= breakpoint) {
-    nav.classList.add("fixed__nav");
-  } else {
-    nav.classList.remove("fixed__nav");
-  }
-}
-window.addEventListener("scroll", fixedNav);
+// Анімація для body-part-1
+gsap.from(".body-part-1", {
+  opacity: 0,
+  x: -20,
+  duration: 1,
+  delay: 1,
+  onComplete: function () {
+    // Коли анімація .body-part-1 завершена, починаємо анімацію тексту
+    var titleText = "Front-end Developer: \n Coding Magic";
+    var descriptionText =
+      "I code beautifully simple things,\nand I love what I do.";
 
-// // Ініціалізуємо ScrollReveal
-ScrollReveal().reveal(".body-part-1", {
-  delay: 400,
-  distance: "50px",
-  origin: "left",
-  duration: 1000,
-});
-ScrollReveal().reveal(".body-part-2", {
-  delay: 400,
-  distance: "50px",
-  origin: "right",
-  duration: 1000,
-});
-ScrollReveal().reveal(".hoodie-guy", {
-  delay: 800,
-  distance: "150px",
-  origin: "top",
-  duration: 1000,
-});
-ScrollReveal().reveal(".cards", {
-  delay: 800,
-  distance: "350px",
-  origin: "left",
-  duration: 1000,
-});
-// swiper start
-// Initialize Swiper
-var swiper = new Swiper(".swiper-container", {
-  // Optional parameters
-  loop: true,
-  autoplay: {
-    delay: 3000, // Інтервал часу (у мілісекундах) між слайдами
-    disableOnInteraction: false, // Автопрогравання не зупиняється при взаємодії користувача
+    var titleElement = document.getElementById("title-text");
+    var descriptionElement = document.getElementById("description-text");
+
+    function typeText(element, text) {
+      var index = 0;
+
+      function addNextCharacter() {
+        if (index < text.length) {
+          element.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(addNextCharacter, 50); // Швидкість набору тексту (в мілісекундах)
+        }
+      }
+
+      addNextCharacter();
+    }
+
+    typeText(titleElement, titleText);
+    setTimeout(function () {
+      typeText(descriptionElement, descriptionText);
+    }, 0); // Затримка перед анімацією другого тексту (в мілісекундах)
   },
+});
+
+// Анімація для body-part-2
+gsap.from(".body-part-2", { opacity: 0, y: 20, duration: 4, delay: 3 });
+gsap.from(".telegram__links", { opacity: 0, x: 20, duration: 2, delay: 5 });
+gsap.from(".body-tail", { opacity: 0, x: -20, duration: 1, delay: 5 });
+gsap.from(".design-card", { opacity: 0, x: -20, duration: 1, delay: 7 });
+gsap.from(".introduction-text", { opacity: 0, x: 20, duration: 2, delay: 7 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+const container = document.querySelector(".container");
+const sections = gsap.utils.toArray(".container section");
+const texts = gsap.utils.toArray(".anim");
+const mask = document.querySelector(".mask");
+
+if (window.innerWidth >= 992) {
+  // Анімація для прокручування секцій
+  let scrollTween = gsap.to(container, {
+    xPercent: -100 * (sections.length - 1),
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".swiper-container-top",
+      start: "bottom right",
+      pin: true,
+      scrub: 1,
+      end: "+=3000",
+      markers: true,
+    },
+  });
+
+  // Анімація верхнього блоку
+  gsap.to(".swiper-container-top .swiper-wrapper", {
+    xPercent: -100,
+    ease: "slow(0.7, 0.7, false)",
+    scrollTrigger: {
+      trigger: ".swiper-container-top",
+      start: "bottom right",
+      scrub: true,
+      markers: true,
+      pin: true,
+      onEnter: () => scrollTween.kill(),
+      onLeaveBack: () => {
+        swiperTop.allowSlideNext = true;
+        ScrollTrigger.vertical = true;
+      },
+    },
+  });
+
+  // Зупинка вертикальної прокрутки при досягненні останнього слайда
+  ScrollTrigger.create({
+    trigger: ".swiper-container-top .swiper-slide:last-child",
+    start: "top+=100 top",
+    end: "bottom+=100 bottom",
+    onEnter: () =>
+      ScrollTrigger.matchMedia({
+        "(min-width: 768px)": () => {
+          swiperTop.allowSlideNext = false;
+          ScrollTrigger.vertical = false;
+        },
+      }),
+    onLeaveBack: () =>
+      ScrollTrigger.matchMedia({
+        "(min-width: 768px)": () => {
+          swiperTop.allowSlideNext = true;
+          ScrollTrigger.vertical = true;
+        },
+      }),
+  });
+}
+
+var swiperTop = new Swiper(".swiper-container-top", {
+  direction: "horizontal",
   slidesPerView: 1,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  centeredSlides: true,
+  speed: 400,
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+    },
+    992: {
+      slidesPerView: 1,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination", // Додано пагінацію
+        clickable: true, // Додано можливість кліку по крапці
+      },
+    },
   },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 });
-// swiper end

@@ -13,7 +13,13 @@
 </head>
 
 <body>
+
+    <!-- preloader -->
+
 <!-- Header -->
+<!-- Main page start -->
+   <div class="main-page"> 
+    
     <section id="header">
             <div class="navbar-title">
                 <h3 class="title-first-name">
@@ -45,18 +51,17 @@
     </section>
 <!-- Hero -->
     <section class="content-body" id="content-body">
+        
         <div class="body-part-1">
-            <div class="developer-intro">
-                <p>Front-end Developer</p>
-            </div>
             <div class="body-title">
-                <h1>Front-end Developer: <br> Coding Magic</h1>
-                <p>I code beautifully simple things,<br>and I love what I do.</p>
+                <h1 id="title-text"></h1>
+                <p id="description-text"></p>
                 <div class="telegram__links">
                     <a href="https://t.me/fucksleeeeeeeep" target="_blank">LET'S CHAT IN TELEGRAM!</a>
                     <a href="https://t.me/kostivFrontEnd" target="_blank">Click to view all my works</a>
                 </div>
             </div>
+            
             <div class="body-tail">
                 <h1>2</h1>
                 <p>YEARS<br>EXPERIENCE</p>
@@ -128,16 +133,17 @@
     </section> 
 
 <!-- Latest works -->
-<section id="latest-works">
-    <div class="latest-work-title">
-        <h3>Latest Works</h3>
-        <p>Perfect solutions for digital experience</p>
-    </div>
+<section id="latest-works" class="wrapper">
 
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide project-card">
+    <div class="swiper-container container swiper-container-top" data-scroll-section>
+        <div class="latest-work-title">
+            <h3>Latest Works</h3>
+            <p>Perfect solutions for digital experience</p>
+                    <!-- <div class="swiper-button-next"></div> -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        </div>
+        <div class="swiper-wrapper" id="mySwiper" data-scroll-section>
+            <div class="swiper-slide project-card" data-scroll-section>
                 <div class="title">
                     <h3>Desire Trip</h3>
                     <div class="tech-stack">
@@ -157,24 +163,6 @@
 
             <div class="swiper-slide project-card">
                 <div class="title">
-                    <h3>Desire Trip</h3>
-                    <div class="tech-stack">
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>JS</p>
-                        <p>JQuery</p>
-                        <p>Swiper</p>
-                        <p>Tailwind</p>
-                    </div>
-                    <a href="https://nickkostiv.github.io/Travel/index.html" class="project__link developer-intro" target="_blank">
-                        <p>View website</p>
-                    </a>
-                </div>
-                <img src="assets/Projects/travel2.png" alt="" class="project-img">
-            </div>
-
-            <div class="swiper-slide project-card">
-                <div class="title">
                     <h3>Furniture</h3>
                     <div class="tech-stack">
                         <p>Gulp.js</p>
@@ -186,72 +174,6 @@
                     </a>
                 </div>
                 <img src="assets/Projects/furni1.png" alt="" class="project-img">
-            </div>
-
-            <div class="swiper-slide project-card">
-                <div class="title">
-                    <h3>Furniture</h3>
-                    <div class="tech-stack">
-                        <p>Gulp.js</p>
-                        <p>SCSS</p>
-                        <p>HTML</p>
-                    </div>
-                    <a href="https://nickkostiv.github.io/furni/build/" class="project__link developer-intro" target="_blank">
-                        <p>View website</p>
-                    </a>
-                </div>
-                <img src="assets/Projects/furni2.png" alt="" class="project-img">
-            </div>
-
-            <div class="swiper-slide project-card">
-                <div class="title">
-                    <h3>Furniture</h3>
-                    <div class="tech-stack">
-                        <p>Gulp.js</p>
-                        <p>SCSS</p>
-                        <p>HTML</p>
-                    </div>
-                    <a href="https://nickkostiv.github.io/furni/build/" class="project__link developer-intro" target="_blank">
-                        <p>View website</p>
-                    </a>
-                </div>
-                <img src="assets/Projects/furni3.png" alt="" class="project-img">
-            </div>
-
-            <div class="swiper-slide project-card">
-                <div class="title">
-                    <h3>LossWeight</h3>
-                    <div class="tech-stack">
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>JS</p>
-                        <p>Bootstrap</p>
-                        <p>ScrollReveal</p>
-                        <p>JQuery</p>
-                    </div>
-                    <a href="https://nickkostiv.github.io/Myweight/" class="project__link developer-intro" target="_blank">
-                        <p>View website</p>
-                    </a>
-                </div>
-                <img src="assets/Projects/loss1.png" alt="" class="project-img">
-            </div>
-
-            <div class="swiper-slide project-card">
-                <div class="title">
-                    <h3>LossWeight</h3>
-                    <div class="tech-stack">
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>JS</p>
-                        <p>Bootstrap</p>
-                        <p>ScrollReveal</p>
-                        <p>JQuery</p>
-                    </div>
-                    <a href="https://nickkostiv.github.io/Myweight/" class="project__link developer-intro" target="_blank">
-                        <p>View website</p>
-                    </a>
-                </div>
-                <img src="assets/Projects/loss2.png" alt="" class="project-img">
             </div>
 
             <div class="swiper-slide project-card">
@@ -271,20 +193,71 @@
                 </div>
                 <img src="assets/Projects/loss3.png" alt="" class="project-img">
             </div>
+
+            <div class="swiper-slide project-card">
+                <div class="title">
+                    <h3>Agency</h3>
+                    <div class="tech-stack">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JS</p>
+                        <p>Bootstrap</p>
+                        <p>JQuery</p>
+                    </div>
+                    <a href="https://nickkostiv.github.io/agency/build/" class="project__link developer-intro" target="_blank">
+                        <p>View website</p>
+                    </a>
+                </div>
+                <img src="assets/Projects/agency.png" alt="" class="project-img">
+            </div>
+
+            <div class="swiper-slide project-card">
+                <div class="title">
+                    <h3>Daos</h3>
+                    <div class="tech-stack">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JS</p>
+                        <p>Bootstrap</p>
+                        <p>JQuery</p>
+                    </div>
+                    <a href="https://nickkostiv.github.io/daos/build/" class="project__link developer-intro" target="_blank">
+                        <p>View website</p>
+                    </a>
+                </div>
+                <img src="assets/Projects/daos.png" alt="" class="project-img">
+            </div>
+
+            <div class="swiper-slide project-card">
+                <div class="title">
+                    <h3>Mozi</h3>
+                    <div class="tech-stack">
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JS</p>
+                        <p>Bootstrap</p>
+                        <p>JQuery</p>
+                    </div>
+                    <a href="https://nickkostiv.github.io/mozi/build/" class="project__link developer-intro" target="_blank">
+                        <p>View website</p>
+                    </a>
+                </div>
+                <img src="assets/Projects/mozi.png" alt="" class="project-img">
+            </div>
         </div>
+                    <div class="swiper-pagination" ></div>
+    </div>
 
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-
+        
         <!-- Add Navigation Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
     </div>
+
 </section>
 
 
 <!-- Section testimonials  -->
-    <section id="testimonial">
+    <section id="testimonial" class="testimonial__trigger">
         <div class="testimonial-title">
             <h2>Testimonials from clients
                 <a href="https://www.upwork.com/freelancers/~011cfa5d36905a298d" class="upwork__link">
@@ -382,10 +355,14 @@
                 </div>
             </div>
         </section>
-    </div>
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+
+</div>
+<script src="assets/js/scrollreveal.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script> 
+<script src="script.js"></script> 
+
 </body>
 
 </html>
