@@ -174,26 +174,9 @@ if (window.innerWidth >= 992) {
   });
 }
 
-var swiperTop = new Swiper(".swiper-container-top", {
+const swiperTop = new Swiper(".swiper-container-top", {
   direction: "horizontal",
   slidesPerView: 1,
   centeredSlides: true,
   speed: 400,
-  breakpoints: {
-    768: {
-      slidesPerView: 1,
-    },
-    992: {
-      slidesPerView: 1,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination", // Додано пагінацію
-        clickable: true, // Додано можливість кліку по крапці
-      },
-    },
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
 });
