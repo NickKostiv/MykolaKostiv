@@ -92,7 +92,7 @@ gsap.from(".body-part-1", {
         if (index < text.length) {
           element.innerHTML += text.charAt(index);
           index++;
-          setTimeout(addNextCharacter, 50); // Швидкість набору тексту (в мілісекундах)
+          setTimeout(addNextCharacter, 70); // Швидкість набору тексту (в мілісекундах)
         }
       }
 
@@ -115,12 +115,12 @@ gsap.from(".introduction-text", { opacity: 0, x: 20, duration: 2, delay: 7 });
 
 gsap.registerPlugin(ScrollTrigger);
 
-const container = document.querySelector(".container");
-const sections = gsap.utils.toArray(".container section");
-const texts = gsap.utils.toArray(".anim");
-const mask = document.querySelector(".mask");
-
 if (window.innerWidth >= 992) {
+  const container = document.querySelector(".container");
+  const sections = gsap.utils.toArray(".container section");
+  const texts = gsap.utils.toArray(".anim");
+  const mask = document.querySelector(".mask");
+
   // Анімація для прокручування секцій
   let scrollTween = gsap.to(container, {
     xPercent: -100 * (sections.length - 1),
@@ -142,7 +142,6 @@ if (window.innerWidth >= 992) {
       trigger: ".swiper-container-top",
       start: "bottom right",
       scrub: true,
-
       pin: true,
       onEnter: () => scrollTween.kill(),
       onLeaveBack: () => {
@@ -179,4 +178,10 @@ const swiperTop = new Swiper(".swiper-container-top", {
   slidesPerView: 1,
   centeredSlides: true,
   speed: 400,
+  spaceBetween: 30,
+  slidesPerGroup: 1,
+  pagination: {
+    el: ".swiper-pagination", // Додано пагінацію
+    clickable: true, // Додано можливість кліку по крапці
+  },
 });

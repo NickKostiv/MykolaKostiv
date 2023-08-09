@@ -374,7 +374,7 @@ body::selection {
   backdrop-filter: blur(15px);
   color: #fefefe;
   position: sticky;
-  z-index: 1;
+  z-index: 9;
   top: 0;
   left: 0;
   margin: 0;
@@ -1026,25 +1026,6 @@ nav {
   flex-wrap: wrap;
   flex-direction: column;
 }
-/* Додано стилі для білих крапок пагінації */
-.swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  opacity: 0.5;
-  margin: 0 5px;
-  border-radius: 50%;
-}
-
-/* Медіазапит для показу пагінації на екранах менше 992 пікселів */
-@media (max-width: 992px) {
-  .swiper-pagination {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 35px; /* Відступ від нижньої межі слайдера */
-  }
-}
 .latest-work-title h3 {
   font-size: 40px;
   color: #fff;
@@ -1066,14 +1047,6 @@ nav {
     padding: 100px 10px 50px 10px;
     margin: 0 auto;
   }
-}
-
-.left-project {
-  /* No need for these styles */
-}
-.swiper-wrapper{
-  display: flex;
-  gap: 50px;
 }
 
 .project-card {
@@ -1293,7 +1266,7 @@ nav {
   max-height: 50px;
   max-width: 50px;
   border-radius: 50%;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
 .single-profile-card div h4 {
@@ -1439,17 +1412,15 @@ nav {
   color: #64f4ac;
 }
 
-/* Додайте інші стилі, якщо потрібно, для кращого вигляду футера */
 /* Swiper slider */
-/* Add Swiper styles */
 .swiper-container {
   width: 100%;
   height: 100%;
 }
 
-
-
 .swiper-slide {
+  width: 100%;
+  max-width: 355px;
   text-align: center;
   font-size: 18px;
   /* Center slide text vertically */
@@ -1458,6 +1429,13 @@ nav {
   justify-content: center;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .swiper-slide {
+    /* Змінюйте стилі відповідно до ваших потреб */
+    max-width: 100%;
+  }
+}
+
 
 .swiper-button-next, .swiper-button-prev {
   display: none;
@@ -1481,18 +1459,38 @@ nav {
     cursor: pointer;
   }
 }
-.swiper-button-prev {
-  left: 45%;
+.swiper-pagination {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: none;
 }
 @media (max-width: 768px) {
-  .swiper-button-next, .swiper-button-prev {
-    display: none;
+  .swiper-pagination{
+    display: flex;
   }
 }
 
-/* Position the next button */
-.swiper-button-next {
-  left: 50%;
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+}
+.swiper-pagination-bullets {
+   bottom: 30px;
+    left: 50%;
+    width: 100%;
+}
+
 
 /* Swiper slider end */
