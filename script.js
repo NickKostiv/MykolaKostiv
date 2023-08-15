@@ -68,6 +68,9 @@ function burgerMenu() {
 burgerMenu();
 
 // Показати контент зі затримкою та анімацією
+// Змініть цей рядок, встановивши opacity на 0 вручну перед анімацією
+gsap.set(".content-body", { opacity: 0 });
+
 gsap.to(".content-body", { opacity: 1, duration: 1 });
 
 // Анімація для body-part-1
@@ -106,12 +109,11 @@ gsap.from(".body-part-1", {
   },
 });
 
-// Анімація для body-part-2
-gsap.from(".body-part-2", { opacity: 0, y: 20, duration: 4, delay: 3 });
-gsap.from(".telegram__links", { opacity: 0, x: 20, duration: 2, delay: 5 });
-gsap.from(".body-tail", { opacity: 0, x: -20, duration: 1, delay: 5 });
-gsap.from(".design-card", { opacity: 0, x: -20, duration: 1, delay: 7 });
-gsap.from(".introduction-text", { opacity: 0, x: 20, duration: 2, delay: 7 });
+gsap.from(".body-part-2", { opacity: 0, y: 20, duration: 2, delay: 4 });
+gsap.from(".telegram__links", { opacity: 0, x: 20, duration: 2, delay: 2 });
+gsap.from(".body-tail", { opacity: 0, x: -20, duration: 1, delay: 4 });
+gsap.from(".design-card", { opacity: 0, x: -20, duration: 1, delay: 9 });
+gsap.from(".introduction-text", { opacity: 0, x: 20, duration: 2, delay: 9 });
 
 gsap.registerPlugin(ScrollTrigger);
 
