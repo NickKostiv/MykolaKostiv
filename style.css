@@ -630,9 +630,9 @@ nav {
 
 /* ---------- SECTION BODY CONTENT ---------- */
 #content-body {
-  padding: 30px 50px 50px 50px;
+  padding: 0px 90px 90px 50px;
   display: flex;
-  background-color: #513f9a;;
+  background-color: #513f9a;
   align-content: center;
   align-items: center;
   justify-content: space-between;
@@ -643,14 +643,10 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     overflow-x: hidden;
+    padding: 50px 0 40px 0;
   }
 }
 @media (max-width: 480px) {
-  .content-body{
-    /* padding-left: 0;
-    padding-right: 0; */
-    padding: 0;
-  }
   .body-title p{
     padding: 0;
   }
