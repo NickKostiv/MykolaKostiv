@@ -659,6 +659,8 @@ nav {
 }
 
 
+
+
 .developer-intro {
   display: flex;
   align-items: center;
@@ -807,7 +809,7 @@ nav {
 }
 @media (max-width: 380px) {
   .hoodie-guy{
-    right: -50px;
+    left: -50%;
     height: 650px;
     width: 550px;
     bottom: 100px;
